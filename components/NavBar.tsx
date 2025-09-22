@@ -1,6 +1,7 @@
 
 import React from 'react'
 import Link from 'next/link'
+import { ModeToggle } from './ThemeButton'
 
 import { Button } from "@/components/ui/button"
 const NavBar = () => {
@@ -10,8 +11,9 @@ const NavBar = () => {
         <ul className='flex w-full justify-end space-x-8 items-center'>
             <li> <Link href={"/"}>Home</Link>   </li>
             <li><Link href={"/about"}>About</Link> </li>
-            <li><Link href={"/Services"}>Services</Link></li>
+            <li><Link href={"/services"}>Services</Link></li>
             <li><Link href={"/Careers"}>Careers</Link></li>
+            <ModeToggle></ModeToggle>
         {/* <Button asChild>
       <Link href="/login">Login</Link>
     </Button> */}
