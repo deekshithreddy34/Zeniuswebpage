@@ -12,7 +12,8 @@ const NavBar = () => {
             <li> <Link href={"/"}>Home</Link>   </li>
             <li><Link href={"/about"}>About</Link> </li>
             <li><Link href={"/services"}>Services</Link></li>
-            <li><Link href={"/Careers"}>Careers</Link></li>
+            <li><Link href={"/careers"}>Careers</Link></li>
+            <li><Link href={"/contact"}>Contact Us</Link></li>
             <ModeToggle></ModeToggle>
         {/* <Button asChild>
       <Link href="/login">Login</Link>
