@@ -4,28 +4,29 @@ import React from "react";
 import { Briefcase, Users, Cpu, Brain } from "lucide-react";
 import RotatingText from "../../components/ui/RotatingText";
 import BlurText from "../../components/ui/BlurText";
+import SpotlightCard from "../../components/ui/SpotlightCard";
 
 const careersData = [
   {
-    icon: <Brain className="text-blue-400 w-8 h-8" />,
+    icon: <Brain className="text-green-400 w-8 h-8" />,
     title: "Innovation",
     description:
       "Work on cutting-edge AI, cloud, and enterprise solutions shaping the future.",
   },
   {
-    icon: <Cpu className="text-blue-400 w-8 h-8" />,
+    icon: <Cpu className="text-yellow-400 w-8 h-8" />,
     title: "Technology",
     description:
       "Hands-on experience with modern tech stacks and scalable solutions.",
   },
   {
-    icon: <Users className="text-blue-400 w-8 h-8" />,
+    icon: <Users className="text-purple-400 w-8 h-8" />,
     title: "Collaboration",
     description:
       "Join passionate teams that value knowledge sharing and teamwork.",
   },
   {
-    icon: <Briefcase className="text-blue-400 w-8 h-8" />,
+    icon: <Briefcase className="text-pink-400 w-8 h-8" />,
     title: "Growth",
     description:
       "Opportunities to learn, lead, and grow within a fast-growing organization.",
@@ -68,14 +69,18 @@ const CareersPage = () => {
       {/* Why Join Us Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl w-full">
         {careersData.map((item, idx) => (
-          <div
-            key={idx}
-            className="bg-gray-50 p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col items-start space-y-3"
-          >
-            {item.icon}
-            <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
-            <p className="text-gray-600 text-sm">{item.description}</p>
-          </div>
+        <SpotlightCard
+  key={idx}
+  className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 h-64 flex flex-col"
+>
+  <div className="flex items-start space-x-3 mb-3">
+    {item.icon}
+    <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
+  </div>
+  <div className="flex-1">
+    <p className="text-gray-600 text-sm">{item.description}</p>
+  </div>
+</SpotlightCard>
         ))}
       </div>
 
