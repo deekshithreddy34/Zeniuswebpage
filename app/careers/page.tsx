@@ -1,64 +1,101 @@
-import React from 'react';
-import RotatingText from '../../components/ui/RotatingText';
-import ShinyText from '../../components/ui/ShinyText';
-import GlareHover from '../../components/ui/GlareHover'
-const Page = () => {
+"use client";
+
+import React from "react";
+import { Briefcase, Users, Cpu, Brain } from "lucide-react";
+import RotatingText from "../../components/ui/RotatingText";
+import BlurText from "../../components/ui/BlurText";
+
+const careersData = [
+  {
+    icon: <Brain className="text-blue-400 w-8 h-8" />,
+    title: "Innovation",
+    description:
+      "Work on cutting-edge AI, cloud, and enterprise solutions shaping the future.",
+  },
+  {
+    icon: <Cpu className="text-blue-400 w-8 h-8" />,
+    title: "Technology",
+    description:
+      "Hands-on experience with modern tech stacks and scalable solutions.",
+  },
+  {
+    icon: <Users className="text-blue-400 w-8 h-8" />,
+    title: "Collaboration",
+    description:
+      "Join passionate teams that value knowledge sharing and teamwork.",
+  },
+  {
+    icon: <Briefcase className="text-blue-400 w-8 h-8" />,
+    title: "Growth",
+    description:
+      "Opportunities to learn, lead, and grow within a fast-growing organization.",
+  },
+];
+
+const CareersPage = () => {
   return (
-
-    <div>
-        <div className='text-3xl font-bold text-center mt-12'>
-            CAREERS
+    <div className="bg-white min-h-screen px-6 py-12 space-y-16 flex flex-col items-center">
+      {/* Hero Section */}
+      <div className="text-center space-y-6">
+        <BlurText
+          text="CAREERS"
+          animateBy="words"
+          direction="top"
+          className="text-3xl font-semibold text-gray-900 justify-center"
+        />
+        <div className="flex justify-center items-center space-x-4 flex-wrap">
+          <span className="text-3xl font-semibold text-gray-800">JOIN US</span>
+          <div className="inline-flex bg-blue-400 text-white rounded-lg px-5 py-2 overflow-hidden">
+            <RotatingText
+              texts={["TO", "GROW", "INNOVATE", "LEAD", "EXCEL"]}
+              mainClassName="text-3xl font-bold"
+              staggerFrom="last"
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              exit={{ y: "-120%" }}
+              staggerDuration={0.025}
+              splitLevelClassName="overflow-hidden"
+              transition={{ type: "spring", damping: 30, stiffness: 400 }}
+              rotationInterval={2000}
+            />
+          </div>
         </div>
-    <div className="flex items-center justify-center mt-5 space-x-4">
+        <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-lg">
+          At Zenius, we build innovative AI and cloud solutions that empower businesses. Join a team where your ideas, creativity, and talent are valued.
+        </p>
+      </div>
 
-        
-      {/* Static text outside */}
-      <span className="text-3xl font-bold">JOIN US</span>
+      {/* Why Join Us Section */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl w-full">
+        {careersData.map((item, idx) => (
+          <div
+            key={idx}
+            className="bg-gray-50 p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col items-start space-y-3"
+          >
+            {item.icon}
+            <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
+            <p className="text-gray-600 text-sm">{item.description}</p>
+          </div>
+        ))}
+      </div>
 
-      {/* Button with rotating text */}
-      <div className="inline-flex bg-purple-600 text-white rounded-lg overflow-hidden flex items-center justify-center px-4 py-2">
-  <RotatingText
-    texts={["TO" ,"GROW","INNOVATE","LEAD","EXCEL"]}
-    mainClassName="flex items-center justify-center font-bold text-3xl"
-    staggerFrom="last"
-    initial={{ y: '100%' }}
-    animate={{ y: 0 }}
-    exit={{ y: '-120%' }}
-    staggerDuration={0.025}
-    splitLevelClassName="overflow-hidden"
-    transition={{ type: 'spring', damping: 30, stiffness: 400 }}
-    rotationInterval={2000}
-  />
-</div>
-
-    </div>
-    <div className="flex justify-center items-center min-h-screen">
-       
-
-<div style={{ height: '600px', position: 'relative' }}>
-  <GlareHover
-    glareColor="#ffffff"
-    glareOpacity={0.3}
-    glareAngle={-30}
-    glareSize={300}
-    transitionDuration={800}
-    playOnce={false}
-  >
-    <h2 style={{ fontSize: '3rem', fontWeight: '900', color: '#333', margin: 0 }}>
-      
-    </h2>
-    <div className='p-8 jutify-center text-font-semibold text-lg'>
-    <p>Zenius is a fast-growing organization within the AI Engineering and Enterprise Cloud Application Development space. We specialize in building innovative, scalable solutions that empower businesses to thrive in the digital era. Our team of passionate professionals works on cutting-edge technologies, from AI and cloud computing to enterprise software solutions, ensuring every project delivers real impact.
-We are constantly looking for talented individuals who are eager to learn, innovate, and grow with us. If you are driven by curiosity, collaboration, and excellence, we would love to hear from you. You can send your CVs to careers@zeniusit.com
- and become part of our journey to shape the future of enterprise technology.</p>
- </div>
-  </GlareHover>
-</div>
-    </div>
-
-    
+      {/* Company Info + CTA */}
+      <div className="max-w-4xl w-full bg-gray-50 p-10 rounded-3xl shadow-lg flex flex-col space-y-6 text-center">
+        <p className="text-gray-700 text-lg">
+          Zenius is a fast-growing organization in AI Engineering and Enterprise Cloud Development. We empower businesses with innovative and scalable solutions.
+        </p>
+        <p className="text-gray-700 text-lg">
+          We are constantly looking for talented individuals eager to learn, innovate, and grow. Join our team and contribute to shaping the future of enterprise technology.
+        </p>
+        <a
+          href="mailto:careers@zeniusit.com"
+          className="bg-blue-400 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-500 transition-colors"
+        >
+          Send Your CV
+        </a>
+      </div>
     </div>
   );
 };
 
-export default Page;
+export default CareersPage;
