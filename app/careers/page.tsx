@@ -46,7 +46,7 @@ const CareersPage = () => {
         />
         <div className="flex justify-center items-center space-x-4 flex-wrap">
           <span className="text-3xl font-semibold text-gray-800">JOIN US</span>
-          <div className="inline-flex bg-blue-400 text-white rounded-lg px-5 py-2 overflow-hidden">
+          <div className="inline-flex bg-purple-600 text-white rounded-lg px-5 py-2 overflow-hidden">
             <RotatingText
               texts={["TO", "GROW", "INNOVATE", "LEAD", "EXCEL"]}
               mainClassName="text-3xl font-bold"

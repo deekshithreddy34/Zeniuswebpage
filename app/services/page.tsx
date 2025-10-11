@@ -44,17 +44,19 @@ export default function Services() {
           { key: "products", label: "Products" },
           { key: "support", label: "Support & Resourcing" },
         ].map(({ key, label }) => (
-          <Button
-            key={key}
-            onClick={() => toggleSection(key)}
-            className={`px-5 py-2 rounded-lg font-medium transition-all ${
-              activeSection === key
-                ? "bg-blue-600 text-white shadow-md"
-                : "bg-gray-100 text-gray-700 hover:bg-blue-50"
-            }`}
-          >
-            {label}
-          </Button>
+        <Button
+  key={key}
+  onClick={() => toggleSection(key)}
+  className={`px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 ease-in-out 
+    ${
+      activeSection === key
+        ? "bg-gradient-to-r from-blue-600 to-blue-500 text-white shadow-lg transform scale-105"
+        : "bg-blue-50 text-blue-700 hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-400 hover:text-white shadow-md"
+    } focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50`}
+>
+  {label}
+</Button>
+
         ))}
       </div>
 
@@ -134,17 +136,17 @@ function Section({ items }: { items: any[] }) {
 
 function ServiceCard({ icon, title, description, list }: { icon: any; title: any; description?: any; list?: any }) {
   return (
-    <SpotlightCard className="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 h-64 flex flex-col">
-      <div className="flex items-start space-x-3 mb-3">
-        {icon}
-        <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
+    <SpotlightCard className="bg-white border border-gray-100 p-6 rounded-3xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 h-72 flex flex-col">
+      <div className="flex items-center space-x-4 mb-5">
+        <div className="text-blue-600 text-3xl">{icon}</div>
+        <h3 className="text-xl font-bold text-gray-900">{title}</h3>
       </div>
       <div className="flex-1">
-        {description && <p className="text-gray-600 text-sm">{description}</p>}
+        {description && <p className="text-gray-600 text-sm mb-3 leading-relaxed">{description}</p>}
         {list && (
-          <ul className="list-disc ml-6 mt-2 text-gray-600 text-sm space-y-1">
+          <ul className="list-disc ml-6 text-gray-600 text-sm space-y-1">
             {list.map((item: string, i: number) => (
-              <li key={i}>{item}</li>
+              <li key={i} className="hover:text-blue-600 transition-colors">{item}</li>
             ))}
           </ul>
         )}
@@ -152,4 +154,6 @@ function ServiceCard({ icon, title, description, list }: { icon: any; title: any
     </SpotlightCard>
   );
 }
+
+
 
