@@ -13,7 +13,7 @@ export default function ContactPage() {
     <div className="w-full min-h-screen bg-gray-100 text-gray-900 flex flex-col items-center px-6 py-20 space-y-12">
       {/* Page Title */}
       <motion.h1
-        className="text-5xl font-bold text-blue-600 text-center"
+        className="text-4xl font-bold text-black-700 text-center"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
       >

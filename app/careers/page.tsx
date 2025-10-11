@@ -1,14 +1,14 @@
 "use client";
 
 import React from "react";
-import { Briefcase, Users, Cpu, Brain } from "lucide-react";
+import { Briefcase, Users, Cpu, Lightbulb } from "lucide-react";
 import RotatingText from "../../components/ui/RotatingText";
 import BlurText from "../../components/ui/BlurText";
 import SpotlightCard from "../../components/ui/SpotlightCard";
 
 const careersData = [
   {
-    icon: <Brain className="text-green-400 w-8 h-8" />,
+    icon: <Lightbulb className="text-blue-400 w-8 h-8" />,
     title: "Innovation",
     description:
       "Work on cutting-edge AI, cloud, and enterprise solutions shaping the future.",
