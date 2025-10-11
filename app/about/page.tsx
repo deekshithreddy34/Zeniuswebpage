@@ -1,35 +1,93 @@
 "use client";
 
-import Orb from '../../components/ui/Orb';
+import Orb from "../../components/ui/Orb";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+};
 
 export default function AboutPage() {
   return (
-    <div className="w-full min-h-screen bg-black relative">
+    <div className="w-full min-h-screen relative bg-white text-gray-900 overflow-hidden">
       {/* Orb Background */}
-      <div style={{ width: '100%', height: '1000px', position: 'relative' }}>
-        <Orb
-          hoverIntensity={0.5}
-          rotateOnHover={true}
-          hue={0}
-          forceHoverState={false}
-          
-        />
+      <div className="absolute inset-0 -z-10">
+        <Orb hoverIntensity={0.5} rotateOnHover={true} hue={200} forceHoverState={false} />
+      </div>
 
-        {/* Text Overlay */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center px-8 text-center">
-          <p className="max-w-3xl text-white text-lg leading-relaxed mb-4">
-            ZENIUS IT SERVICES PRIVATE LIMITED is a trusted leader in AI engineering and enterprise software development, dedicated to delivering ethical and innovative technology solutions. Our journey has been defined by a passion for excellence and a commitment to helping organizations achieve their digital transformation goals.
+      {/* Hero Section */}
+      <div className="text-center pt-32 md:pt-40 px-6 max-w-4xl mx-auto space-y-6">
+        <motion.h1
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+          className="text-5xl md:text-4xl font-extrabold text-blue-400"
+        >
+          ABOUT ZENIUS IT SERVICES
+        </motion.h1>
+        <motion.p
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+          className="text-lg md:text-xl text-gray-700 leading-relaxed"
+        >
+          Zenius IT Services is a trusted leader in AI engineering and enterprise software development, delivering scalable and innovative technology solutions to businesses across multiple sectors.
+        </motion.p>
+      </div>
+
+      {/* Content Sections */}
+      <div className="max-w-5xl mx-auto space-y-16 px-6 py-16">
+        <motion.div
+          className="bg-gray-50 rounded-3xl p-10 shadow-lg"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <h2 className="text-3xl font-bold text-blue-400 mb-4">Our Mission</h2>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Our mission is to help organizations achieve digital transformation by delivering innovative, scalable, and tailored technology solutions. We focus on AI engineering, full stack development, contact center solutions, and seamless system integrations.
           </p>
-          <p className="max-w-3xl text-white text-lg leading-relaxed mb-4">
-            Our experienced and energetic team brings deep industry expertise across artificial intelligence, full stack development, contact center solutions, and seamless system integrations. We have successfully delivered impactful projects for clients in diverse sectors, including healthcare, utilities, and telecom—empowering businesses to enhance operations and deliver exceptional customer experiences.
+        </motion.div>
+
+        <motion.div
+          className="bg-gray-50 rounded-3xl p-10 shadow-lg"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <h2 className="text-3xl font-bold text-blue-400 mb-4">Our Team</h2>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Our experienced and energetic team brings deep industry expertise and creativity to every project. We have successfully delivered impactful solutions for clients in healthcare, utilities, telecom, and other sectors, enhancing operations and delivering exceptional customer experiences.
           </p>
-          <p className="max-w-3xl text-white text-lg leading-relaxed mb-4">
-            At Zenius, we believe that true innovation comes from understanding our clients’ unique needs and collaborating closely to craft tailored, scalable solutions. Our specialists stay ahead of industry trends to ensure every project is future-ready and aligned with your business objectives.
+        </motion.div>
+
+        <motion.div
+          className="bg-gray-50 rounded-3xl p-10 shadow-lg"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <h2 className="text-3xl font-bold text-blue-400 mb-4">Our Approach</h2>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            We collaborate closely with clients to understand their unique needs and craft future-ready solutions. Our specialists stay ahead of industry trends, ensuring every project is scalable, secure, and aligned with business objectives.
           </p>
-          <p className="max-w-3xl text-white text-lg leading-relaxed">
-            Discover how our unwavering commitment to quality, integrity, and customer success continues to drive the evolution of enterprise technology. Keep scrolling to explore our services and learn how we can partner with you on your digital journey.
+        </motion.div>
+
+        <motion.div
+          className="bg-gray-50 rounded-3xl p-10 shadow-lg"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <h2 className="text-3xl font-bold text-blue-400 mb-4">Why Zenius?</h2>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            At Zenius, we are committed to quality, integrity, and customer success. Our innovative solutions empower organizations to thrive in the digital era, and our passion drives the evolution of enterprise technology.
           </p>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
