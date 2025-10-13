@@ -17,7 +17,7 @@ export default function Services() {
   const handleAnimationComplete = () => console.log("Animation completed!");
 
   return (
-    <div className="flex flex-col items-center mt-12 space-y-10 bg-white min-h-screen px-6">
+    <div className="flex flex-col items-center pt-20 pb-12 space-y-10 bg-white min-h-screen px-6">
       {/* Heading */}
       <BlurText
         text="Our Services"

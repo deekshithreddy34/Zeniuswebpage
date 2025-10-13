@@ -35,9 +35,9 @@ const careersData = [
 
 const CareersPage = () => {
   return (
-    <div className="bg-white min-h-screen px-6 py-12 space-y-16 flex flex-col items-center">
+    <div className="bg-white min-h-screen px-4 pt-5 pb-12 space-y-10 flex flex-col items-center">
       {/* Hero Section */}
-      <div className="text-center space-y-6">
+      <div className="text-center space-y-3">
         <BlurText
           text="CAREERS"
           animateBy="words"

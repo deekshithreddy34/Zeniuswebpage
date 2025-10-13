@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 const NavBar = () => {
   return (
     <nav className="h-16 bg-background/60 sticky top-0 border-b px-8 backdrop-blur flex items-center">
-        <div className='font-bold text-xl'>Zenius</div>
+        <img src="https://www.zeniusit.com/assets/images/asset-32x-450x233.png" className='w-25 h-13' />
         <ul className='flex w-full justify-end space-x-8 items-center'>
             <li> <Link href={"/"}>Home</Link>   </li>
             <li><Link href={"/about"}>About</Link> </li>

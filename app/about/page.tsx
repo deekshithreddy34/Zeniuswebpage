@@ -17,7 +17,7 @@ export default function AboutPage() {
       </div>
 
       {/* Hero Section */}
-      <div className="text-center pt-32 md:pt-40 px-6 max-w-4xl mx-auto space-y-6">
+      <div className="text-center pt-32 md:pt-20 px-6 max-w-4xl mx-auto space-y-6">
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
