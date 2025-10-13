@@ -2,7 +2,10 @@
 
 import { motion } from "framer-motion";
 import { FaCloud, FaCode, FaLightbulb } from "react-icons/fa";
-
+import AboutPage from "./about/page";
+import Services from "./services/page";
+import CareersPage from "./careers/page";
+import ContactPage from "./contact/page";
 export default function Home() {
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -49,7 +52,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="w-full py-24 px-6 bg-gray-50 flex flex-col items-center space-y-12">
+      {/* <section className="w-full py-24 px-6 bg-gray-50 flex flex-col items-center space-y-12">
         <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">Our Core Services</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl w-full">
           {[
@@ -81,7 +84,7 @@ export default function Home() {
             </motion.div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Call to Action Section */}
       <section className="w-full py-24 px-6 flex flex-col items-center bg-gradient-to-r from-blue-100 via-blue-50 to-white">
@@ -93,6 +96,13 @@ export default function Home() {
           Get In Touch
         </button>
       </section>
+
+     <AboutPage></AboutPage>
+     <Services></Services>
+      <CareersPage></CareersPage>
+      <ContactPage></ContactPage>
+
+      
     </div>
   );
 }
