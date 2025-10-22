@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 const NavBar = () => {
   return (
-    <nav className="h-16 bg-background/60 sticky top-0 border-b px-8 backdrop-blur flex items-center">
+    <nav className="h-16 bg-white/90 sticky top-0 border-b px-8 backdrop-blur flex items-center text-black">
         <img src="https://www.zeniusit.com/assets/images/asset-32x-450x233.png" className='w-25 h-13' />
         <ul className='flex w-full justify-end space-x-8 items-center'>
             <li> <Link href={"/"}  className="relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:left-0 after:bottom-0 after:bg-cyan-500 after:transition-all after:duration-300 hover:after:w-full font-semibold">Home</Link>   </li>
