@@ -96,7 +96,7 @@ const CareersPage = () => {
           href="mailto:careers@zeniusit.com"
           className="bg-blue-400 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-500 transition-colors"
         >
-          Send Your CV
+          Send Your CV mailto:careers@zeniusit.com
         </a>
       </div>
     </div>
