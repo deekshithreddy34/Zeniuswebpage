@@ -6,7 +6,8 @@ import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 const NavBar = () => {
   return (
-  <nav className="h-16 bg-white/70 sticky top-0 border-b px-8 flex items-center text-black shadow-md z-40">
+ <nav className="h-16 bg-white shadow-md sticky top-0 border-b px-8 flex items-center text-black z-50">
+
 
 
         <img src="https://www.zeniusit.com/assets/images/asset-32x-450x233.png" className='w-25 h-13' />
