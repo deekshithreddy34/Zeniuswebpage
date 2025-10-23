@@ -1,6 +1,5 @@
 "use client";
 
-import Orb from "../../components/ui/Orb";
 import { motion } from "framer-motion";
 
 const fadeUp = {
@@ -11,10 +10,6 @@ const fadeUp = {
 export default function AboutPage() {
   return (
     <div className="w-full min-h-screen relative bg-white text-gray-900 overflow-hidden">
-      {/* Orb Background */}
-      <div className="absolute inset-0 -z-10">
-        <Orb hoverIntensity={0.5} rotateOnHover={true} hue={200} forceHoverState={false} />
-      </div>
 
       {/* Hero Section */}
       <div className="text-center pt-32 md:pt-20 px-6 max-w-4xl mx-auto space-y-6">
@@ -39,26 +34,26 @@ export default function AboutPage() {
       <div className="max-w-5xl mx-auto space-y-16 px-6 py-16">
         {/* Our Mission */}
         <motion.div
-  className="bg-gray-50 rounded-3xl p-10 shadow-lg flex flex-col md:flex-row items-center gap-6"
-  variants={fadeUp}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}
->
-  <div className="md:w-1/2">
-    <h2 className="text-3xl font-bold text-blue-400 mb-4">Our Mission</h2>
-    <p className="text-gray-700 text-lg leading-relaxed">
-      Our mission is to help organizations achieve digital transformation by delivering innovative, scalable, and tailored technology solutions.
-    </p>
-  </div>
-  <div className="md:w-1/2 rounded-xl overflow-hidden shadow-lg">
-    <img
-      src="/goals.jpg"
-      alt="Mission image"
-      className="w-full h-64 md:h-auto object-cover"
-    />
-  </div>
-</motion.div>
+          className="bg-gray-50 rounded-3xl p-10 shadow-lg flex flex-col md:flex-row items-center gap-6"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <div className="md:w-1/2">
+            <h2 className="text-3xl font-bold text-blue-400 mb-4">Our Mission</h2>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Our mission is to help organizations achieve digital transformation by delivering innovative, scalable, and tailored technology solutions.
+            </p>
+          </div>
+          <div className="md:w-1/2 rounded-xl overflow-hidden shadow-lg">
+            <img
+              src="/goals.jpg"
+              alt="Mission image"
+              className="w-full h-64 md:h-auto object-cover"
+            />
+          </div>
+        </motion.div>
 
         {/* Our Team */}
         <motion.div
@@ -107,26 +102,26 @@ export default function AboutPage() {
 
         {/* Why Zenius */}
         <motion.div
-  className="bg-gray-50 rounded-3xl p-10 shadow-lg flex flex-col md:flex-row items-center gap-6"
-  variants={fadeUp}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}
->
-  <div className="md:w-1/2">
-    <h2 className="text-3xl font-bold text-blue-400 mb-4">Why Zenius?</h2>
-    <p className="text-gray-700 text-lg leading-relaxed">
-      At Zenius, we are committed to quality, integrity, and customer success. Our innovative solutions empower organizations to thrive in the digital era.
-    </p>
-  </div>
-  <div className="md:w-1/2 rounded-xl overflow-hidden shadow-lg">
-    <img
-      src="/professional.jpg"
-      alt="Why Zenius image"
-      className="w-full h-64 md:h-auto object-cover"
-    />
-  </div>
-</motion.div>
+          className="bg-gray-50 rounded-3xl p-10 shadow-lg flex flex-col md:flex-row items-center gap-6"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <div className="md:w-1/2">
+            <h2 className="text-3xl font-bold text-blue-400 mb-4">Why Zenius?</h2>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              At Zenius, we are committed to quality, integrity, and customer success. Our innovative solutions empower organizations to thrive in the digital era.
+            </p>
+          </div>
+          <div className="md:w-1/2 rounded-xl overflow-hidden shadow-lg">
+            <img
+              src="/professional.jpg"
+              alt="Why Zenius image"
+              className="w-full h-64 md:h-auto object-cover"
+            />
+          </div>
+        </motion.div>
       </div>
     </div>
   );
